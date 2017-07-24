@@ -5,34 +5,28 @@ Android 5.0推出市场已经有很久了，最大特色就是材料设计，L�
 Material Design材料设计，是的一种新的设计风格，谷歌希望寄由此来统一各种平台上的应用外观和用户体验。
 
 # 主要介绍一下控件使用:
+             
+[Snackbar](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/snackbar.md/) 提示条    
 
-    提示条                 Snackbar
+Toolbar 工具栏
 
-    工具栏                 Toolbar
+TabLayout 标签布局
 
-    应用栏布局             AppBarLayout
+NavigationView    导航视图          
+     
+CoordinatorLayout 协调布局               
 
-    循环视图               RecyclerView
+FloatingActionButton    悬浮按钮               
 
-    卡片视图               CardView
+SwipeRefreshLayout    下拉刷新布局           
 
-    标签布局               TabLayout
+NestedScrollView    嵌套滚动视图          
 
-    导航视图               NavigationView
+CollapsingToolbarLayout    可折叠工具栏布局       
 
-    协调布局               CoordinatorLayout
+TextInputLayout    文本输入布局           
 
-    悬浮按钮               FloatingActionButton
-
-    下拉刷新布局           SwipeRefreshLayout
-
-    嵌套滚动视图           NestedScrollView
-
-    可折叠工具栏布局       CollapsingToolbarLayout
-
-    文本输入布局           TextInputLayout
-
-    文本输入编辑框         TextInputEditText
+TextInputEditText    文本输入编辑框         
 
 
 # 类:
