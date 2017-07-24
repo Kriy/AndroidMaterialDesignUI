@@ -80,7 +80,6 @@ public class SnackbarActivity extends AppCompatActivity implements View.OnClickL
 
     private void addImage(View v) {
         Snackbar snackbar = Snackbar.make(v, "test", Snackbar.LENGTH_SHORT);
-        snackbar.setActionTextColor()
         Drawable img = getResources().getDrawable(R.mipmap.ic_launcher);
         img.setBounds(0, 0, img.getMinimumWidth() - 20, img.getMinimumHeight() - 80);
         ((TextView) snackbar.getView().findViewById(R.id.snackbar_text)).setCompoundDrawables(img, null, null, null);
