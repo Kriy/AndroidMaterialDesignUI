@@ -79,11 +79,17 @@ CollapsingToolbarLayout中的控件(如：ImageView、Toolbar)在响应layout_be
 
 
 #替代关系:
+
     Toolbar：替代ActionBar
+
     RecyclerView：替代ListView和GridView
+
     NestedScrollView：替代ScrollView
+
     Snackbar：替代Toast
+
     FloatingActionButton：替代ImageButton
+    
     TextInputEditText：替代EditText
 
 
