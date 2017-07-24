@@ -14,4 +14,13 @@
     <string name="collapsingtoolbarlayout_demo">CollapsingToolbarLayout Demo</string>
     <string name="textinputlayout_demo">TextInputLayout Demo</string>
     <string name="textinputedittext_demo">TextInputEditText Demo</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_nested_scroll_view">NestedScrollViewActivity</string>
+    <string name="snack">snack</string>
+    <string name="time">自定义显示时间</string>
+    <string name="clikc">可单击</string>
+    <string name="change_color">修改颜色</string>
+    <string name="add_image">添加图片</string>
 </resources>

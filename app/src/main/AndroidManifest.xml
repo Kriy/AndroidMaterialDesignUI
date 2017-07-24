@@ -3,10 +3,9 @@
           package="com.materialdesignui">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -16,6 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".snackbar.SnackbarActivity"/>
+        <activity android:name=".appbarlayout.AppbarLayoutActivity"/>
+        <activity android:name=".cardview.CardViewActivity"/>
+        <activity android:name=".collapsingtoolbarlayout.CollapsingToolbarLayoutActivity"/>
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutActivity"/>
+        <activity android:name=".floatingactionbutton.FloatingActionButtonActivity"/>
+        <activity android:name=".navigationview.NavigationViewActivity"/>
+        <activity android:name=".nestedscrollview.NestedScrollViewActivity"/>
+        <activity android:name=".recyclerview.RecyclerViewActivity"/>
+        <activity android:name=".tablayout.TabLayoutActivity"/>
+        <activity android:name=".textinputedittext.TextInputEditTextActivity"/>
+        <activity android:name=".textinputlayout.TextInputLayoutActivity"/>
+        <activity android:name=".toolbar.ToolbarActivity"/>
+        <activity android:name=".swiperefreshlayout.SwipeRefreshLayoutActivity"/>
     </application>
 
 </manifest>
