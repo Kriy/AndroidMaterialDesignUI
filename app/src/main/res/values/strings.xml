@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MaterialDesignUI</string>
+    <string name="snackbar_demo">Snackbar Demo</string>
+    <string name="toolbar_demo">Toolbar Demo</string>
+    <string name="appbarlayout_demo">AppBarLayout Demo</string>
+    <string name="recyclerview_demo">RecyclerView Demo</string>
+    <string name="cardview_demo">CardView Demo</string>
+    <string name="tablayout_demo">TabLayout Demo</string>
+    <string name="navigationview_demo">NavigationView Demo</string>
+    <string name="coordinatorlayout_demo">CoordinatorLayout Demo</string>
+    <string name="floatingactionbutton_demo">FloatingActionButton Demo</string>
+    <string name="swiperefreshlayout_demo">SwipeRefreshLayout Demo</string>
+    <string name="nestedscrollview_demo">NestedScrollView Demo</string>
+    <string name="collapsingtoolbarlayout_demo">CollapsingToolbarLayout Demo</string>
+    <string name="textinputlayout_demo">TextInputLayout Demo</string>
+    <string name="textinputedittext_demo">TextInputEditText Demo</string>
 </resources>
