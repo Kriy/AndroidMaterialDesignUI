@@ -4,7 +4,7 @@
 Android 5.0推出市场已经有很久了，最大特色就是材料设计，L中增添了不少的新控件。此次创建此库为了便于学习新控件，对新控件做一个归纳。
 Material Design材料设计，是的一种新的设计风格，谷歌希望寄由此来统一各种平台上的应用外观和用户体验。
 
-#主要介绍一下控件使用:
+# 主要介绍一下控件使用:
 
     提示条                 Snackbar
 
@@ -35,7 +35,7 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
     文本输入编辑框         TextInputEditText
 
 
-#类:
+# 类:
 
     底部弹窗               BottomSheetBehavior
 
@@ -78,7 +78,7 @@ CollapsingToolbarLayout中的控件(如：ImageView、Toolbar)在响应layout_be
 一般嵌套一个EditText，用来在输入内容后提示内容显示在外面，还具有空校验
 
 
-#替代关系:
+# 替代关系:
 
     Toolbar：替代ActionBar
 
@@ -89,7 +89,7 @@ CollapsingToolbarLayout中的控件(如：ImageView、Toolbar)在响应layout_be
     Snackbar：替代Toast
 
     FloatingActionButton：替代ImageButton
-    
+
     TextInputEditText：替代EditText
 
 
