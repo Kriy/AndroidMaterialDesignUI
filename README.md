@@ -5,23 +5,38 @@ Android 5.0推出市场已经有很久了，最大特色就是材料设计，L�
 Material Design材料设计，是的一种新的设计风格，谷歌希望寄由此来统一各种平台上的应用外观和用户体验。
 
 #主要介绍一下控件使用:
+
     提示条                 Snackbar
+
     工具栏                 Toolbar
+
     应用栏布局             AppBarLayout
+
     循环视图               RecyclerView
+
     卡片视图               CardView
+
     标签布局               TabLayout
+
     导航视图               NavigationView
+
     协调布局               CoordinatorLayout
+
     悬浮按钮               FloatingActionButton
+
     下拉刷新布局           SwipeRefreshLayout
+
     嵌套滚动视图           NestedScrollView
+
     可折叠工具栏布局       CollapsingToolbarLayout
+
     文本输入布局           TextInputLayout
+
     文本输入编辑框         TextInputEditText
 
 
 #类:
+
     底部弹窗               BottomSheetBehavior
 
 
