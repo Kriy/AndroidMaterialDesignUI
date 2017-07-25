@@ -8,7 +8,7 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
              
 - [Snackbar](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/snackbar.md/) 提示条    
 
-- Toolbar 工具栏
+- [Toolbar](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/toolbar.md) 工具栏
 
 - TabLayout 标签布局
 
@@ -18,8 +18,7 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
 
 - FloatingActionButton    悬浮按钮               
 
-- [SwipeRefreshLayout](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/swiperefreshlayout.md)
-- 下拉刷新布局           
+- [SwipeRefreshLayout](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/swiperefreshlayout.md) 下拉刷新布局           
 
 - NestedScrollView    嵌套滚动视图          
 
