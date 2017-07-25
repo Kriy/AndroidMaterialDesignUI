@@ -6,32 +6,33 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
 
 # 主要介绍一下控件使用:
              
-[Snackbar](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/snackbar.md/) 提示条    
+- [Snackbar](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/snackbar.md/) 提示条    
 
-Toolbar 工具栏
+- Toolbar 工具栏
 
-TabLayout 标签布局
+- TabLayout 标签布局
 
-NavigationView    导航视图          
+- NavigationView    导航视图          
      
-CoordinatorLayout 协调布局               
+- CoordinatorLayout 协调布局               
 
-FloatingActionButton    悬浮按钮               
+- FloatingActionButton    悬浮按钮               
 
-SwipeRefreshLayout    下拉刷新布局           
+- [SwipeRefreshLayout](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/swiperefreshlayout.md)
+- 下拉刷新布局           
 
-NestedScrollView    嵌套滚动视图          
+- NestedScrollView    嵌套滚动视图          
 
-CollapsingToolbarLayout    可折叠工具栏布局       
+- CollapsingToolbarLayout    可折叠工具栏布局       
 
-TextInputLayout    文本输入布局           
+- TextInputLayout    文本输入布局           
 
-TextInputEditText    文本输入编辑框         
+- TextInputEditText    文本输入编辑框         
 
 
 # 类:
 
-    底部弹窗               BottomSheetBehavior
+  >  底部弹窗               BottomSheetBehavior
 
 
 

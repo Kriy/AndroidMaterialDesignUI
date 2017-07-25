@@ -7,8 +7,8 @@
 
 常用api:
 
-    public void setProgressViewOffset(boolean scale, int start, int end) //设置滚动View位置,一般在刚打开界面时才用 [scale:true测量;start/end偏移量] 
-    public void setProgressViewEndTarget(boolean scale, int end)  //设置滚动View休息位置 [scale:true测量;end偏移量]
+    public void setProgressViewOffset(boolean scale, int start, int end) //设置滚动View位置,一般在刚打开界面时才用 [scale:true;start/end] 
+    public void setProgressViewEndTarget(boolean scale, int end)  //设置滚动View结束位置 [scale:true;end]
     public void setSize(int size)  //背景圆圈大小(样式) [LARGE/DEFAULT]
     public void setOnRefreshListener(OnRefreshListener listener)  //设置监听，需要重写onRefresh()方法，顶部下拉时会调用这个方法，在里面实现请求数据的逻辑，设置下拉进度条消失等等。
 
@@ -29,3 +29,12 @@
 这里只是大致介绍一下相应的api,在实际开发中结合其他控件使用时，会遇到一些冲突，这个就需要去分析处理了
 
 
+Demo： 
+	https://github.com/Kriy/AndroidMaterialDesignUI
+
+效果如下：
+
+
+![](http://i.imgur.com/G5cVok9.gif)
+
+可以看到在加载的过程中也是可改变的
