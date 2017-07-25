@@ -23,4 +23,6 @@
     <string name="clikc">可单击</string>
     <string name="change_color">修改颜色</string>
     <string name="add_image">添加图片</string>
+    <string name="menu_search">搜索</string>
+    <string name="notifica">通知</string>
 </resources>

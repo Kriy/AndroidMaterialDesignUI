@@ -27,7 +27,10 @@
         <activity android:name=".tablayout.TabLayoutActivity"/>
         <activity android:name=".textinputedittext.TextInputEditTextActivity"/>
         <activity android:name=".textinputlayout.TextInputLayoutActivity"/>
-        <activity android:name=".toolbar.ToolbarActivity"/>
+        <activity android:name=".toolbar.ToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".toolbar.CenterActivity"/>
         <activity android:name=".swiperefreshlayout.SwipeRefreshLayoutActivity"/>
     </application>
 

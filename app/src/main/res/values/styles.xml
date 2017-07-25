@@ -15,5 +15,15 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">@android:color/holo_blue_light</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>  <!--把该属性改为false即可使menu位置位于toolbar之下-->
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
 </resources>
