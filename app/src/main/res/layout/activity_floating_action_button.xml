@@ -7,15 +7,213 @@
     android:layout_height="match_parent"
     tools:context="com.materialdesignui.floatingactionbutton.FloatingActionButtonActivity">
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_centerInParent="true"
-        app:fabSize="mini"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:id="@+id/fl_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
-    <TextView
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/float_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/fav_2"
+            app:elevation="5dp"
+            app:fabSize="normal"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/float_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/idea"
+            app:elevation="5dp"
+            app:fabSize="normal"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/float_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/faxian"
+            app:elevation="5dp"
+            app:fabSize="normal"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/float_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/menu"
+            app:elevation="5dp"
+            app:fabSize="normal"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlAddBill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="100dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/miniFab01"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="测试中"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/miniFab01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:src="@mipmap/menu"
+                    app:backgroundTint="@color/color_XSD"
+                    app:elevation="5dp"
+                    app:fabSize="mini"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll01"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/miniFab02"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="测试中"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/miniFab02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:src="@mipmap/menu"
+                    app:backgroundTint="@color/color_XSTH"
+                    app:elevation="5dp"
+                    app:fabSize="mini"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll02"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/miniFab02"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="测试中"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/miniFab03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:src="@mipmap/menu"
+                    app:backgroundTint="@color/color_SKD"
+                    app:elevation="5dp"
+                    app:fabSize="mini"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll03"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/miniFab02"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="测试中"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/miniFab04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:src="@mipmap/menu"
+                    app:backgroundTint="@color/color_JHD"
+                    app:elevation="5dp"
+                    app:fabSize="mini"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab01Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_add_white_24dp"
+            app:backgroundTint="#31bfcf"
+            app:elevation="5dp"
+            app:fabSize="normal"
+            app:rippleColor="#e7d161"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_width="48dp"
-        android:layout_height="48dp"/>
+        android:text="切换"/>
 
 </RelativeLayout>
