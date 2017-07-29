@@ -1,22 +1,38 @@
 package com.materialdesignui.floatingactionbutton;
 
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.materialdesignui.R;
 
-public class FloatingActionButtonActivity extends AppCompatActivity {
+public class FloatingActionButtonActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final int DISTANCE = 300;
     private static final int DISTANCE2 = 220;
 
     private FloatingActionButton actionButton, actionButton1, actionButton2, actionButton3;
     private boolean mMenuOpen = false;
-    private boolean mIsChange = false;
     private View mFlMenu;
+
+    private boolean mIsChange = true;
+    private FloatingActionButton mFabAdd;
+    private boolean isAdd = false;
+    private RelativeLayout mRlAddBill;
+    private int[]                  llId     = new int[]{R.id.ll01,R.id.ll02,R.id.ll03,R.id.ll04};
+    private LinearLayout[]         mLlArray = new LinearLayout[llId.length];
+    private int[]                  mFabId   = new int[]{R.id.miniFab01,R.id.miniFab02,R.id.miniFab03,R.id.miniFab04};
+    private FloatingActionButton[] mFabs    = new FloatingActionButton[mFabId.length];
+    private AnimatorSet mAddBillTranslate1;
+    private AnimatorSet mAddBillTranslate2;
+    private AnimatorSet mAddBillTranslate3;
+    private AnimatorSet mAddBillTranslate4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +44,12 @@ public class FloatingActionButtonActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mFlMenu.setVisibility(mIsChange ? View.VISIBLE : View.GONE);
+                findViewById(R.id.rl_other_layout).setVisibility(mIsChange ? View.GONE : View.VISIBLE);
                 mIsChange = !mIsChange;
             }
         });
         initView();
-
+        initOtherView();
     }
 
     private void initView() {
@@ -54,6 +71,28 @@ public class FloatingActionButtonActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void initOtherView() {
+        mFabAdd = (FloatingActionButton)findViewById(R.id.fabAdd);
+        mRlAddBill = (RelativeLayout)findViewById(R.id.rlAddBill);
+        for (int i = 0; i < llId.length;i++){
+            mLlArray[i] = (LinearLayout)findViewById(llId[i]);
+        }
+        for (int i = 0; i < mFabId.length; i++){
+            mFabs[i] = (FloatingActionButton)findViewById(mFabId[i]);
+        }
+
+        mAddBillTranslate1 = (AnimatorSet) AnimatorInflater.loadAnimator(this,R.animator.add_anim);
+        mAddBillTranslate2 = (AnimatorSet) AnimatorInflater.loadAnimator(this,R.animator.add_anim);
+        mAddBillTranslate3 = (AnimatorSet) AnimatorInflater.loadAnimator(this,R.animator.add_anim);
+        mAddBillTranslate4 = (AnimatorSet) AnimatorInflater.loadAnimator(this,R.animator.add_anim);
+
+        mFabAdd.setOnClickListener(this);
+        for (int i = 0; i < mFabId.length; i++){
+            mFabs[i].setOnClickListener(this);
+        }
+    }
+
 
     private void showMenu() {
         mMenuOpen = true;
@@ -165,5 +204,43 @@ public class FloatingActionButtonActivity extends AppCompatActivity {
         v2x.start();
         v2y.start();
         v3.start();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.fabAdd:
+                mFabAdd.setImageResource(isAdd ? R.drawable.ic_add :R.drawable.ic_close);
+                isAdd = !isAdd;
+                mRlAddBill.setVisibility(isAdd ? View.VISIBLE : View.GONE);
+                if (isAdd) {
+                        mAddBillTranslate1.setTarget(mLlArray[0]);
+                        mAddBillTranslate1.start();
+                        mAddBillTranslate2.setTarget(mLlArray[1]);
+                        mAddBillTranslate2.setStartDelay(150);
+                        mAddBillTranslate2.start();
+                        mAddBillTranslate3.setTarget(mLlArray[2]);
+                        mAddBillTranslate3.setStartDelay(00);
+                        mAddBillTranslate3.start();
+                        mAddBillTranslate4.setTarget(mLlArray[3]);
+                        mAddBillTranslate4.setStartDelay(250);
+                        mAddBillTranslate4.start();
+                    }
+                break;
+            case R.id.miniFab01:
+            case R.id.miniFab02:
+            case R.id.miniFab03:
+            case R.id.miniFab04:
+                hideFABMenu();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void hideFABMenu() {
+        mRlAddBill.setVisibility(View.GONE);
+        mFabAdd.setImageResource(R.drawable.ic_add);
+        isAdd = false;
     }
 }

@@ -60,6 +60,7 @@
     </FrameLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_other_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -96,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="25dp"
                     android:src="@mipmap/menu"
-                    app:backgroundTint="@color/color_XSD"
+                    app:backgroundTint="@color/color_test"
                     app:elevation="5dp"
                     app:fabSize="mini"/>
             </LinearLayout>
@@ -106,6 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/ll01"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
                 >
 
@@ -127,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="25dp"
                     android:src="@mipmap/menu"
-                    app:backgroundTint="@color/color_XSTH"
+                    app:backgroundTint="@color/color_test"
                     app:elevation="5dp"
                     app:fabSize="mini"/>
             </LinearLayout>
@@ -137,6 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/ll02"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -157,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="25dp"
                     android:src="@mipmap/menu"
-                    app:backgroundTint="@color/color_SKD"
+                    app:backgroundTint="@color/color_test"
                     app:elevation="5dp"
                     app:fabSize="mini"/>
             </LinearLayout>
@@ -167,6 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/ll03"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -187,21 +191,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="25dp"
                     android:src="@mipmap/menu"
-                    app:backgroundTint="@color/color_JHD"
+                    app:backgroundTint="@color/color_test"
                     app:elevation="5dp"
                     app:fabSize="mini"/>
             </LinearLayout>
         </RelativeLayout>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab01Add"
+            android:id="@+id/fabAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="20dp"
             android:layout_marginRight="15dp"
-            android:src="@mipmap/ic_add_white_24dp"
+            android:src="@mipmap/idea"
             app:backgroundTint="#31bfcf"
             app:elevation="5dp"
             app:fabSize="normal"

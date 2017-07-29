@@ -16,7 +16,7 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
      
 - CoordinatorLayout 协调布局               
 
-- FloatingActionButton    悬浮按钮               
+- [FloatingActionButton](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/floatingactionbutton.md)    悬浮按钮               
 
 - [SwipeRefreshLayout](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/swiperefreshlayout.md) 下拉刷新布局           
 
