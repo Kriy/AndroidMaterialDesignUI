@@ -66,20 +66,20 @@
 
         <Button
             android:id="@+id/btn_tab_01"
-            android:text="tab图片"
+            android:text="修改Indicator"
+            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btn_tab_02"
-            android:text="tab图片+文字"
+            android:text="tab图片+文字（横）"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btn_tab_03"
-            android:text="修改Indicator"
-            android:textAllCaps="false"
+            android:text="tab图片+文字（纵）"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
