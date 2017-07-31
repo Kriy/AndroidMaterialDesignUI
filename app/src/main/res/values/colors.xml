@@ -8,5 +8,6 @@
 
     <color name="color_test">#aaff00</color>
 
+    <color name="bg_cardview">#66aa33</color>
 
 </resources>

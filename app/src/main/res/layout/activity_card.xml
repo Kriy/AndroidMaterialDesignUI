@@ -1,10 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.materialdesignui.cardview.CardViewActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="普通狀態cardview"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="圆角狀態cardview"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        app:cardElevation="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="阴影狀態cardview"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        app:contentPadding="15dp"
+        app:cardBackgroundColor="@android:color/holo_orange_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="内边距狀態cardview"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/tab_01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/tab_01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_marginTop="20dp"
+        android:text="结合recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -9,18 +9,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".snackbar.SnackbarActivity"/>
+        <activity android:name=".appbarlayout.AppbarLayoutActivity"/>
+        <activity android:name=".cardview.CardViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".snackbar.SnackbarActivity"/>
-        <activity android:name=".appbarlayout.AppbarLayoutActivity"/>
-        <activity android:name=".cardview.CardViewActivity"/>
+        <activity android:name=".cardview.CardRecyclerActivity"/>
         <activity android:name=".collapsingtoolbarlayout.CollapsingToolbarLayoutActivity"/>
         <activity android:name=".coordinatorlayout.CoordinatorLayoutActivity"/>
-        <activity android:name=".floatingactionbutton.FloatingActionButtonActivity"
+        <activity
+            android:name=".floatingactionbutton.FloatingActionButtonActivity"
             android:theme="@style/FABTheme">
         </activity>
         <activity android:name=".navigationview.NavigationViewActivity"/>
@@ -32,7 +42,8 @@
         <activity android:name=".tablayout.TabIndicatorActivity"/>
         <activity android:name=".textinputedittext.TextInputEditTextActivity"/>
         <activity android:name=".textinputlayout.TextInputLayoutActivity"/>
-        <activity android:name=".toolbar.ToolbarActivity"
+        <activity
+            android:name=".toolbar.ToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".toolbar.CenterActivity"/>
