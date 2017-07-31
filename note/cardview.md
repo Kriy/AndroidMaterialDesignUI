@@ -145,7 +145,7 @@
 
 先看效果吧
 
-![](http://i.imgur.com/tW5p1iZ.gif)
+![](http://i.imgur.com/GYgVdHS.gif)
 
 界面展示的效果还是蛮不错的，单击也设置了水波纹的效果
 
