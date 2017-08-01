@@ -94,3 +94,108 @@ CollapsingToolbarLayout中的控件(如：ImageView、Toolbar)在响应layout_be
 
 
 
+# 动态替换Theme
+
+	MaterialTheme配色方案：http://www.materialpalette.com
+	修改状态栏，ActionBar，界面背景，NavigationBar的颜色。让Activity使用自定义的Theme。
+	<style name="AppTheme" parent="@android:style/Theme.Material">
+	    <!--状态栏颜色-->
+	    <item name="android:colorPrimaryDark">#f00</item>
+	    <!--ActionBar颜色-->
+	    <item name="android:colorPrimary">#ff0</item>
+	    <!--界面背景颜色-->
+	    <item name="android:windowBackground">@color/colorWindowBackground</item>
+	    <!--导航栏颜色-->
+	    <item name="android:navigationBarColor">#00f</item>
+	</style>
+
+	动态替换Theme的步骤：
+	定义至少2套theme
+	调用setTheme方法设置当前的theme，但是该方法要在setContentView之前，如:
+		setTheme(mTheme);
+		setContentView(R.layout.activity_main);
+	设置了Theme，需要finish当前Activity，然后重启当前Activity，让Theme生效
+		Intent intent = getActivity().getIntent();
+		getActivity().finish();//结束当前的Activity
+		getActivity().overridePendingTransition(0,0);//不要动画
+		startActivity(intent);
+
+# View的高度与阴影
+
+	官网介绍：https://developer.android.com/intl/zh-tw/training/material/shadows-clipping.html
+
+	View新增属性z轴，用来体现Material Design中的层次，影响因素2个：elevation 和 translationZ
+		View高度 = elevation + translationZ
+	elevation表示view的高度，高度越大，阴影越大，可以在xml中直接使用属性， 也可以在代码中使用view.setEvelvation();
+		android:elevation="10dp"
+
+	transtionZ属性表示view在Z方向移动的距离，一般用于属性动画中
+		android:translationZ="10dp"
+
+	高度影响View的绘制顺序，过去是按View添加顺序绘制，先添加的先绘制，现在高度小的先绘制，因为高度小的，层级低，在下面， 高度相同的，按添加顺序绘制
+	注意：
+		如果View的背景色为透明，则不会显示出阴影效果
+		只有子View的大小比父View小时，阴影才能显示出来
+
+# 水波纹动画，自定义水波纹动画以及状态选择器动画
+
+- 首先，在Android5.0以上，点击效果默认自带水波纹效果，并且有2种选择：
+
+	//矩形边框水波纹
+	android:background="?android:attr/selectableItemBackground"
+
+	//无边框限制水波纹
+	android:background="?android:attr/selectableItemBackgroundBorderless"
+
+- 自定义水波纹动画
+
+	使用ViewAnimationUtils创建圆形水波纹动画，注意该动画不能在Activity的onCreate方法中执行：
+
+	Animator circularReveal = ViewAnimationUtils.createCircularReveal(text, 0, text.getHeight() , 1f, text.getWidth()*2);
+	circularReveal.setDuration(1000);
+	circularReveal.start();
+
+	使用ripple标签或者RippleDrawable可以更改控件水波纹动画颜色：
+
+	<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#00ff00">
+	<item android:id="@android:id/mask" ><color android:color="#0000ff" />
+ 
+- 定义带有属性动画的状态选择器
+
+	通过stateListAnimator属性指定状态选择器的动画：
+	android:stateListAnimator="@drawable/selector_anim"
+	状态选择器文件中需要加入objectAnimator标签：
+
+		<selector  xmlns:android = "http://schemas.android.com/apk/res/android" >
+		<item  android:statepressed = "true" >
+		<objectAnimator  android:propertyName = "scaleX"
+		        android:duration = "@android:integer/configshortAnimTime"
+		        android:valueTo = "0.2"
+		        android:valueFrom = "1"
+		        android:valueType = "floatType" >
+			//...
+	同样，状态选择器动画可以用代码方式加载
+
+	//加载动画
+
+	AnimatorInflater.loadStateListAnimator();
+
+	//设置动画
+
+	View.setStateListAnimator();
+
+	定义带有帧动画的状态选择器，需要设置给background属性，不是stateListAnimator，如下所示:
+
+		<animated-selector  xmlns:android = "http://schemas.android.com/apk/res/android" > 
+		<item  android:id = "@+id/pressed"  android:drawable = "@drawable/drawableP" 
+		    android:state_pressed = "true" /> 
+		<item  android:id = "@id/default" 
+		    android:drawable = "@drawable/drawableD" /> 
+		<!-- 指定帧动画 - -> 
+		<transition  android:fromId = "@+id/default"  android:toId = "@+id/pressed" > 
+		    <animation-list> 
+		        <item  android:duration = "15"  android:drawable = "@drawable/dt1 " /> 
+		        <item  android:duration = "15"  android:drawable = "@drawable/dt2" /> 
+		        ... 
+		    </animation-list> 
+		 </animated-selector>
