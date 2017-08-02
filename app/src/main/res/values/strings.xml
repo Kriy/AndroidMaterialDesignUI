@@ -26,4 +26,5 @@
     <string name="menu_search">搜索</string>
     <string name="notifica">通知</string>
     <string name="title_activity_card_recycler">CardRecyclerActivity</string>
+    <string name="scroll_content" formatted="false">1, scroll :这个子View将会随着可滚动View（如：NestedScrollView,以下都会用NestedScrollView 来代替可滚动的View ）一起滚动，就好像子View 是属于NestedScrollView的一部分一样。 \n 2, enterAlways :NestedScrollView 向下滑动时，子View 将直接向下滑动，而不管NestedScrollView 是否在滑动，结合scroll一起使用 \n 3, enterAlwaysCollapsed , enterAlwaysCollapsed 是对enterAlways 的补充，当ScrollView 向下滑动的时候，滑动View（也就是设置了enterAlwaysCollapsed 的View）下 滑至折叠的高度，当ScrollView 到达滑动范围的结束值的时候，滑动View剩下的部分开始滑动。这个折叠的高度是通过View的minimum height （最小高度）指定的 结合scroll|enterAlways一起使用 \n 4,exitUntilCollapsed, 当ScrollView 滑出屏幕时（也就时向上滑动时），滑动View先响应滑动事件，滑动至折叠高度，也就是通过minimum height 设置的最小高度后，就固定不动了， 再把滑动事件交给 scrollview 继续滑动，结合scroll一起使用 \n 5, snap,意思是：在滚动结束后，如果view只是部分可见，它将滑动到最近的边界。比如，如果view的底部只有25%可见，它将滚动离开屏幕，而如果底部有75%可见，它将滚动到完全显示，结合scroll一起使用</string>
 </resources>

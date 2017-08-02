@@ -21,7 +21,7 @@ public class CardRecAdapter extends RecyclerView.Adapter<CardRecAdapter.ViewHold
 
     public CardRecAdapter() {
         this.mList = new ArrayList<>();
-        for (int i = 1; i <= 60; i++) {
+        for (int i = 1; i <= 20; i++) {
             mList.add("测试中的数据。。。" + i);
         }
     }

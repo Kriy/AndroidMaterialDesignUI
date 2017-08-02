@@ -10,7 +10,7 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
 
 - [Toolbar](https://github.com/Kriy/AndroidMaterialDesignUI/blob/master/note/toolbar.md) 工具栏
 
-- AppBarLayout 应用栏布局
+- [AppBarLayout](http://blog.csdn.net/hj2drf/article/details/76595191) 应用栏布局
 
 - RecyclerView 循环器视图
 
