@@ -36,6 +36,8 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
 # 类:
 
   >  底部弹窗               BottomSheetBehavior
+  >  
+  >  嵌套滚动				NestedScrolling
 
 
 
