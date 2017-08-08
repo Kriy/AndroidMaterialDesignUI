@@ -12,6 +12,7 @@ import com.materialdesignui.collapsingtoolbarlayout.CollapsingToolbarLayoutActiv
 import com.materialdesignui.coordinatorlayout.CoordinatorLayoutActivity;
 import com.materialdesignui.floatingactionbutton.FloatingActionButtonActivity;
 import com.materialdesignui.navigationview.NavigationViewActivity;
+import com.materialdesignui.nestedscrollview.NestedScrollViewActivity;
 import com.materialdesignui.recyclerview.RecyclerViewActivity;
 import com.materialdesignui.snackbar.SnackbarActivity;
 import com.materialdesignui.swiperefreshlayout.SwipeRefreshLayoutActivity;
