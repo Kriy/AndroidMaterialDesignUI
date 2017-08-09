@@ -10,12 +10,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN"/> -->
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-            <!-- </intent-filter> -->
+             <category android:name="android.intent.category.LAUNCHER"/>
+             </intent-filter>
         </activity>
         <activity android:name=".snackbar.SnackbarActivity"/>
         <activity
@@ -29,7 +29,6 @@
             android:name=".floatingactionbutton.FloatingActionButtonActivity"
             android:theme="@style/FABTheme">
         </activity>
-        <activity android:name=".navigationview.NavigationViewActivity"/>
         <activity android:name=".recyclerview.RecyclerViewActivity"/>
         <activity android:name=".tablayout.TabLayoutActivity"/>
         <activity android:name=".tablayout.TabIconActivity"/>
@@ -56,11 +55,6 @@
             android:name=".navigationview.NavigationActivity"
             android:label="@string/title_activity_navi"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
     </application>
 

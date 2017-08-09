@@ -11,7 +11,7 @@ import com.materialdesignui.cardview.CardViewActivity;
 import com.materialdesignui.collapsingtoolbarlayout.CollapsingToolbarLayoutActivity;
 import com.materialdesignui.coordinatorlayout.CoordinatorLayoutActivity;
 import com.materialdesignui.floatingactionbutton.FloatingActionButtonActivity;
-import com.materialdesignui.navigationview.NavigationViewActivity;
+import com.materialdesignui.navigationview.NavigationActivity;
 import com.materialdesignui.nestedscrollview.NestedScrollViewActivity;
 import com.materialdesignui.recyclerview.RecyclerViewActivity;
 import com.materialdesignui.snackbar.SnackbarActivity;
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         } else if (id == R.id.btn_tablayout) {
             intent.setClass(this, TabLayoutActivity.class);
         } else if (id == R.id.btn_navigationView) {
-            intent.setClass(this, NavigationViewActivity.class);
+            intent.setClass(this, NavigationActivity.class);
         } else if (id == R.id.btn_coordinatorlayout) {
             intent.setClass(this, CoordinatorLayoutActivity.class);
         } else if (id == R.id.btn_floating_action_button) {
