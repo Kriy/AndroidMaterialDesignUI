@@ -18,7 +18,7 @@ Material Design材料设计，是的一种新的设计风格，谷歌希望寄�
 
 - [TabLayout](http://blog.csdn.net/hj2drf/article/details/76405469) 标签布局
 
-- NavigationView 导航视图          
+- [NavigationView](http://blog.csdn.net/hj2drf/article/details/77017284) 导航视图          
      
 - CoordinatorLayout 协调布局               
 
