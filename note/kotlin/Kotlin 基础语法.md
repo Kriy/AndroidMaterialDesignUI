@@ -1,4 +1,4 @@
-# Kotlin   基础语法
+# Kotlin基础语法
 Kotlin 文件以 .kt 为后缀。
 
 # 包声明
