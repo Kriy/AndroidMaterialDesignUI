@@ -195,3 +195,4 @@ DataProviderManager.registerDataProvider(……)
 	对象表达式是在使用他们的地方立即执行的
 	对象声明是在第一次被访问到时延迟初始化的
 	伴生对象的初始化是在相应的类被加载（解析）时，与 Java 静态初始化器的语义相匹配
+
