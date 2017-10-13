@@ -165,7 +165,9 @@ static 关键字用来声明独立于对象的静态方法。静态方法不能�
 	
 	Started with 0 instances
 	Created 500 instances
-	final 修饰符
+	
+final 修饰符
+	
 	final 变量：
 	final 变量能被显式地初始化并且只能初始化一次。被声明为 final 的对象的引用不能指向不同的对象。但是 final 对象里的数据可以被改变。
 			也就是说 final 对象的引用不能改变，但是里面的值可以改变。
