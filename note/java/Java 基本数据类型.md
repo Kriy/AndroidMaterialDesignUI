@@ -83,14 +83,22 @@ Java语言提供了八种基本类型。六种数字类型（四个整数型，�
 
 - char：
 
-char类型是一个单一的 16 位 Unicode 字符；
-最小值是 \u0000（即为0）；
-最大值是 \uffff（即为65,535）；
-char 数据类型可以储存任何字符；
+        char类型是一个单一的 16 位 Unicode 字符；
+	
+        最小值是 \u0000（即为0）；
+	
+        最大值是 \uffff（即为65,535）；
+	
+        char 数据类型可以储存任何字符；
+
 例子：char letter = 'A';。
+
 实例
+
 对于数值类型的基本类型的取值范围，我们无需强制去记忆，因为它们的值都已经以常量的形式定义在对应的包装类中了。请看下面的例子：
+
 实例
+
 public class PrimitiveTypeTest {  
     public static void main(String[] args) {  
         // byte  
