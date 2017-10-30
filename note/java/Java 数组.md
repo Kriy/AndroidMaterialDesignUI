@@ -9,16 +9,21 @@ dataType[] arrayRefVar;   // 首选的方法
  
 或
  
-dataType arrayRefVar[];  // 效果相同，但不是首选方法
-注意: 建议使用 dataType[] arrayRefVar 的声明风格声明数组变量。 dataType arrayRefVar[] 风格是来自 C/C++ 语言 ，在Java中采用是为了让 C/C++ 程序员能够快速理解java语言。
+	dataType arrayRefVar[];  // 效果相同，但不是首选方法
+	注意: 建议使用 dataType[] arrayRefVar 的声明风格声明数组变量。 dataType arrayRefVar[] 风格是来自 C/C++ 语言 ，在Java中采用是为了让 C/C++ 程序员能够快速理解java语言。
+
 实例
 下面是这两种语法的代码示例：
+
 double[] myList;         // 首选的方法
  
 或
  
+
 double myList[];         //  效果相同，但不是首选方法
+
 创建数组
+
 Java语言使用new操作符来创建数组，语法如下：
 arrayRefVar = new dataType[arraySize];
 上面的语法语句做了两件事：
