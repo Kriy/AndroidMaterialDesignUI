@@ -26,151 +26,177 @@ Date对象创建以后，可以调用下面的方法。
 	8	int hashCode( )
 	 返回此对象的哈希码值。
 	9	void setTime(long time)
- 
-用自1970年1月1日00:00:00 GMT以后time毫秒数设置时间和日期。
-10	String toString( )
-转换Date对象为String表示形式，并返回该字符串。
+	用自1970年1月1日00:00:00 GMT以后time毫秒数设置时间和日期。
+	10	String toString( )
+	转换Date对象为String表示形式，并返回该字符串。
+
 获取当前日期时间
+
 Java中获取当前日期和时间很简单，使用 Date 对象的 toString() 方法来打印当前日期和时间，如下所示：
-实例
-import java.util.Date;
-  
-public class DateDemo {
-   public static void main(String args[]) {
-       // 初始化 Date 对象
-       Date date = new Date();
-        
-       // 使用 toString() 函数显示日期时间
-       System.out.println(date.toString());
-   }
-}
 
-运行实例 »
+实例
+	
+	import java.util.Date;
+	  
+	public class DateDemo {
+	   public static void main(String args[]) {
+	       // 初始化 Date 对象
+	       Date date = new Date();
+	        
+	       // 使用 toString() 函数显示日期时间
+	       System.out.println(date.toString());
+	   }
+	}
+
 以上实例编译运行结果如下:
-Mon May 04 09:51:52 CDT 2013
+
+	Mon May 04 09:51:52 CDT 2013
+
 日期比较
+
 Java使用以下三种方法来比较两个日期：
+
 使用 getTime() 方法获取两个日期（自1970年1月1日经历的毫秒数值），然后比较这两个值。
-使用方法 before()，after() 和 equals()。例如，一个月的12号比18号早，则 new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回true。
+
+使用方法 before()，after() 和 equals()。
+
+例如，一个月的12号比18号早，则 new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回true。
+
 使用 compareTo() 方法，它是由 Comparable 接口定义的，Date 类实现了这个接口。
+
 使用 SimpleDateFormat 格式化日期
+
 SimpleDateFormat 是一个以语言环境敏感的方式来格式化和分析日期的类。SimpleDateFormat 允许你选择任何用户自定义日期时间格式来运行。例如：
-实例
-import java.util.*;
-import java.text.*;
- 
-public class DateDemo {
-   public static void main(String args[]) {
- 
-      Date dNow = new Date( );
-      SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
- 
-      System.out.println("Current Date: " + ft.format(dNow));
-   }
-}
+	
+	import java.util.*;
+	import java.text.*;
+	 
+	public class DateDemo {
+	   public static void main(String args[]) {
+	 
+	      Date dNow = new Date( );
+	      SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+	 
+	      System.out.println("Current Date: " + ft.format(dNow));
+	   }
+	}
 
-运行实例 »
-SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+运行实例
+
+	SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+
 这一行代码确立了转换的格式，其中 yyyy 是完整的公元年，MM 是月份，dd 是日期，HH:mm:ss 是时、分、秒。
-注意:有的格式大写，有的格式小写，例如 MM 是月份，mm 是分；HH 是 24 小时制，而 hh 是 12 小时制。
-以上实例编译运行结果如下:
-Current Date: Sun 2014.07.18 at 14:14:09 PM PDT
-日期和时间的格式化编码
-时间模式字符串用来指定时间格式。在此模式中，所有的 ASCII 字母被保留为模式字母，定义如下：
-字母	描述	示例
-G	纪元标记	AD
-y	四位年份	2001
-M	月份	July or 07
-d	一个月的日期	10
-h	 A.M./P.M. (1~12)格式小时	12
-H	一天中的小时 (0~23)	22
-m	分钟数	30
-s	秒数	55
-S	毫秒数	234
-E	星期几	Tuesday
-D	一年中的日子	360
-F	一个月中第几周的周几	2 (second Wed. in July)
-w	一年中第几周	40
-W	一个月中第几周	1
-a	A.M./P.M. 标记	PM
-k	一天中的小时(1~24)	24
-K	 A.M./P.M. (0~11)格式小时	10
-z	时区	Eastern Standard Time
-'	文字定界符	Delimiter
-"	单引号	`
-使用printf格式化日期
-printf 方法可以很轻松地格式化时间和日期。使用两个字母格式，它以 %t 开头并且以下面表格中的一个字母结尾。
-转  换  符
-说    明
-示    例
-c
-包括全部日期和时间信息
-星期六 十月 27 14:21:20 CST 2007
-F
-"年-月-日"格式
-2007-10-27
-D
-"月/日/年"格式
-10/27/07
-r
-"HH:MM:SS PM"格式（12时制）
-02:25:51 下午
-T
-"HH:MM:SS"格式（24时制）
-14:28:16
-R
-"HH:MM"格式（24时制）
-14:28
-更多 printf 解析可以参见：Java 格式化输出 printf 例子
-实例
-实例
-import java.util.Date;
- 
-public class DateDemo {
- 
-  public static void main(String args[]) {
-     // 初始化 Date 对象
-     Date date = new Date();
- 
-     //c的使用  
-    System.out.printf("全部日期和时间信息：%tc%n",date);          
-    //f的使用  
-    System.out.printf("年-月-日格式：%tF%n",date);  
-    //d的使用  
-    System.out.printf("月/日/年格式：%tD%n",date);  
-    //r的使用  
-    System.out.printf("HH:MM:SS PM格式（12时制）：%tr%n",date);  
-    //t的使用  
-    System.out.printf("HH:MM:SS格式（24时制）：%tT%n",date);  
-    //R的使用  
-    System.out.printf("HH:MM格式（24时制）：%tR",date);  
-  }
-}
 
-运行实例 »
+注意:有的格式大写，有的格式小写，例如 MM 是月份，mm 是分；HH 是 24 小时制，而 hh 是 12 小时制。
+
 以上实例编译运行结果如下:
-全部日期和时间信息：星期一 九月 10 10:43:36 CST 2012  
-年-月-日格式：2012-09-10  
-月/日/年格式：09/10/12  
-HH:MM:SS PM格式（12时制）：10:43:36 上午  
-HH:MM:SS格式（24时制）：10:43:36  
-HH:MM格式（24时制）：10:43  
-如果你需要重复提供日期，那么利用这种方式来格式化它的每一部分就有点复杂了。因此，可以利用一个格式化字符串指出要被格式化的参数的索引。
-索引必须紧跟在%后面，而且必须以$结束。例如：
+
+Current Date: Sun 2014.07.18 at 14:14:09 PM PDT
+
+日期和时间的格式化编码
+
+时间模式字符串用来指定时间格式。在此模式中，所有的 ASCII 字母被保留为模式字母，定义如下：
+
+	字母	描述	示例
+	G	纪元标记	AD
+	y	四位年份	2001
+	M	月份	July or 07
+	d	一个月的日期	10
+	h	 A.M./P.M. (1~12)格式小时	12
+	H	一天中的小时 (0~23)	22
+	m	分钟数	30
+	s	秒数	55
+	S	毫秒数	234
+	E	星期几	Tuesday
+	D	一年中的日子	360
+	F	一个月中第几周的周几	2 (second Wed. in July)
+	w	一年中第几周	40
+	W	一个月中第几周	1
+	a	A.M./P.M. 标记	PM
+	k	一天中的小时(1~24)	24
+	K	 A.M./P.M. (0~11)格式小时	10
+	z	时区	Eastern Standard Time
+	'	文字定界符	Delimiter
+	"	单引号	`
+
+使用printf格式化日期
+
+printf 方法可以很轻松地格式化时间和日期。使用两个字母格式，它以 %t 开头并且以下面表格中的一个字母结尾。
+
+	转  换  符
+	说    明
+	示    例
+	c
+	包括全部日期和时间信息
+	星期六 十月 27 14:21:20 CST 2007
+	F
+	"年-月-日"格式
+	2007-10-27
+	D
+	"月/日/年"格式
+	10/27/07
+	r
+	"HH:MM:SS PM"格式（12时制）
+	02:25:51 下午
+	T
+	"HH:MM:SS"格式（24时制）
+	14:28:16
+	R
+	"HH:MM"格式（24时制）
+	14:28
+	更多 printf 解析可以参见：Java 格式化输出 printf 例子
+
 实例
-import java.util.Date;
-  
-public class DateDemo {
- 
-   public static void main(String args[]) {
-       // 初始化 Date 对象
-       Date date = new Date();
-        
-       // 使用toString()显示日期和时间
-       System.out.printf("%1$s %2$tB %2$td, %2$tY", 
-                         "Due date:", date);
-   }
-}
+	
+	import java.util.Date;
+	 
+	public class DateDemo {
+	 
+	  public static void main(String args[]) {
+	     // 初始化 Date 对象
+	     Date date = new Date();
+	 
+	     //c的使用  
+	    System.out.printf("全部日期和时间信息：%tc%n",date);          
+	    //f的使用  
+	    System.out.printf("年-月-日格式：%tF%n",date);  
+	    //d的使用  
+	    System.out.printf("月/日/年格式：%tD%n",date);  
+	    //r的使用  
+	    System.out.printf("HH:MM:SS PM格式（12时制）：%tr%n",date);  
+	    //t的使用  
+	    System.out.printf("HH:MM:SS格式（24时制）：%tT%n",date);  
+	    //R的使用  
+	    System.out.printf("HH:MM格式（24时制）：%tR",date);  
+	  }
+	}
+
+以上实例编译运行结果如下:
+	
+	全部日期和时间信息：星期一 九月 10 10:43:36 CST 2012  
+	年-月-日格式：2012-09-10  
+	月/日/年格式：09/10/12  
+	HH:MM:SS PM格式（12时制）：10:43:36 上午  
+	HH:MM:SS格式（24时制）：10:43:36  
+	HH:MM格式（24时制）：10:43  
+
+如果你需要重复提供日期，那么利用这种方式来格式化它的每一部分就有点复杂了。因此，可以利用一个格式化字符串指出要被格式化的参数的索引。
+
+索引必须紧跟在%后面，而且必须以$结束。例如：
+	
+	import java.util.Date;
+	  
+	public class DateDemo {
+	 
+	   public static void main(String args[]) {
+	       // 初始化 Date 对象
+	       Date date = new Date();
+	        
+	       // 使用toString()显示日期和时间
+	       System.out.printf("%1$s %2$tB %2$td, %2$tY", 
+	                         "Due date:", date);
+	   }
+	}
 
 
 以上实例编译运行结果如下:
