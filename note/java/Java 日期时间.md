@@ -56,15 +56,15 @@ Java中获取当前日期和时间很简单，使用 Date 对象的 toString() �
 
 Java使用以下三种方法来比较两个日期：
 
-使用 getTime() 方法获取两个日期（自1970年1月1日经历的毫秒数值），然后比较这两个值。
-
-使用方法 before()，after() 和 equals()。
+	使用 getTime() 方法获取两个日期（自1970年1月1日经历的毫秒数值），然后比较这两个值。
+	
+	使用方法 before()，after() 和 equals()。
 
 例如，一个月的12号比18号早，则 new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回true。
 
-使用 compareTo() 方法，它是由 Comparable 接口定义的，Date 类实现了这个接口。
+	使用 compareTo() 方法，它是由 Comparable 接口定义的，Date 类实现了这个接口。
 
-使用 SimpleDateFormat 格式化日期
+	使用 SimpleDateFormat 格式化日期
 
 SimpleDateFormat 是一个以语言环境敏感的方式来格式化和分析日期的类。SimpleDateFormat 允许你选择任何用户自定义日期时间格式来运行。例如：
 	
@@ -91,7 +91,7 @@ SimpleDateFormat 是一个以语言环境敏感的方式来格式化和分析日
 
 以上实例编译运行结果如下:
 
-Current Date: Sun 2014.07.18 at 14:14:09 PM PDT
+	Current Date: Sun 2014.07.18 at 14:14:09 PM PDT
 
 日期和时间的格式化编码
 
