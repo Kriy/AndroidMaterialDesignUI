@@ -54,16 +54,19 @@ static float interest(float principal, int year){...}
 实例
 下面的方法包含 2 个参数 num1 和 num2，它返回这两个参数的最大值。
 /** 返回两个整型变量数据的较大值 */
-public static int max(int num1, int num2) {
-   int result;
-   if (num1 > num2)
-      result = num1;
-   else
-      result = num2;
- 
-   return result; 
-}
+
+	public static int max(int num1, int num2) {
+	   int result;
+	   if (num1 > num2)
+	      result = num1;
+	   else
+	      result = num2;
+	 
+	   return result; 
+	}
+
 方法调用
+
 Java 支持两种调用方法的方式，根据方法是否返回值来选择。
 当程序调用一个方法时，程序的控制权交给了被调用的方法。当被调用方法的返回语句执行或者到达方法体闭括号时候交还控制权给程序。
 当方法返回一个值的时候，方法调用通常被当做一个值。例如：
