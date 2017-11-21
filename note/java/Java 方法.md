@@ -81,61 +81,72 @@ int larger = max(30, 40);
 System.out.println("欢迎访问菜鸟教程！");
 示例
 下面的例子演示了如何定义一个方法，以及如何调用它：
-TestMax.java 文件代码：
-public class TestMax {
-   /** 主方法 */
-   public static void main(String[] args) {
-      int i = 5;
-      int j = 2;
-      int k = max(i, j);
-      System.out.println( i + " 和 " + j + " 比较，最大值是：" + k);
-   }
- 
-   /** 返回两个整数变量较大的值 */
-   public static int max(int num1, int num2) {
-      int result;
-      if (num1 > num2)
-         result = num1;
-      else
-         result = num2;
- 
-      return result; 
-   }
-}
+	
+	TestMax.java 文件代码：
+	public class TestMax {
+	   /** 主方法 */
+	   public static void main(String[] args) {
+	      int i = 5;
+	      int j = 2;
+	      int k = max(i, j);
+	      System.out.println( i + " 和 " + j + " 比较，最大值是：" + k);
+	   }
+	 
+	   /** 返回两个整数变量较大的值 */
+	   public static int max(int num1, int num2) {
+	      int result;
+	      if (num1 > num2)
+	         result = num1;
+	      else
+	         result = num2;
+	 
+	      return result; 
+	   }
+	}
+
 以上实例编译运行结果如下：
-5 和 2 比较，最大值是：5
+
+	5 和 2 比较，最大值是：5
+
 这个程序包含 main 方法和 max 方法。main 方法是被 JVM 调用的，除此之外，main 方法和其它方法没什么区别。
+
 main 方法的头部是不变的，如例子所示，带修饰符 public 和 static,返回 void 类型值，方法名字是 main,此外带个一个 String[] 类型参数。String[] 表明参数是字符串数组。
+
 void 关键字
+
 本节说明如何声明和调用一个 void 方法。
 下面的例子声明了一个名为 printGrade 的方法，并且调用它来打印给定的分数。
-示例
-TestVoidMethod.java 文件代码：
-public class TestVoidMethod {
-  public static void main(String[] args) {
-    printGrade(78.5);
-  }
- 
-  public static void printGrade(double score) {
-    if (score >= 90.0) {
-       System.out.println('A');
-    }
-    else if (score >= 80.0) {
-       System.out.println('B');
-    }
-    else if (score >= 70.0) {
-       System.out.println('C');
-    }
-    else if (score >= 60.0) {
-       System.out.println('D');
-    }
-    else {
-       System.out.println('F');
-    }
-  }
-}
+
+	示例
+	TestVoidMethod.java 文件代码：
+	public class TestVoidMethod {
+	  public static void main(String[] args) {
+	    printGrade(78.5);
+	  }
+	 
+	  public static void printGrade(double score) {
+	    if (score >= 90.0) {
+	       System.out.println('A');
+	    }
+	    else if (score >= 80.0) {
+	       System.out.println('B');
+	    }
+	    else if (score >= 70.0) {
+	       System.out.println('C');
+	    }
+	    else if (score >= 60.0) {
+	       System.out.println('D');
+	    }
+	    else {
+	       System.out.println('F');
+	    }
+	  }
+	}
+
 以上实例编译运行结果如下：
+
 C
+
 这里printGrade方法是一个void类型方法，它不返回值。
 一个void方法的调用一定是一个语句。 所以，它被在main方法第三行以语句形式调用。就像任何以分号结束的语句一样。
 通过值传递参数
