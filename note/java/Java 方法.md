@@ -199,55 +199,60 @@ public class TestPassByValue {
 方法的重载
 上面使用的max方法仅仅适用于int型数据。但如果你想得到两个浮点类型数据的最大值呢？
 解决方法是创建另一个有相同名字但参数不同的方法，如下面代码所示：
-public static double max(double num1, double num2) {
-  if (num1 > num2)
-    return num1;
-  else
-    return num2;
-}
-如果你调用max方法时传递的是int型参数，则 int型参数的max方法就会被调用；
-如果传递的是double型参数，则double类型的max方法体会被调用，这叫做方法重载；
-就是说一个类的两个方法拥有相同的名字，但是有不同的参数列表。
-Java编译器根据方法签名判断哪个方法应该被调用。
-方法重载可以让程序更清晰易读。执行密切相关任务的方法应该使用相同的名字。
-重载的方法必须拥有不同的参数列表。你不能仅仅依据修饰符或者返回类型的不同来重载方法。
-变量作用域
-变量的范围是程序中该变量可以被引用的部分。
-方法内定义的变量被称为局部变量。
-局部变量的作用范围从声明开始，直到包含它的块结束。
-局部变量必须声明才可以使用。
-方法的参数范围涵盖整个方法。参数实际上是一个局部变量。
-for循环的初始化部分声明的变量，其作用范围在整个循环。
-但循环体内声明的变量其适用范围是从它声明到循环体结束。它包含如下所示的变量声明：
 
-你可以在一个方法里，不同的非嵌套块中多次声明一个具有相同的名称局部变量，但你不能在嵌套块内两次声明局部变量。
-命令行参数的使用
-有时候你希望运行一个程序时候再传递给它消息。这要靠传递命令行参数给main()函数实现。
-命令行参数是在执行程序时候紧跟在程序名字后面的信息。
+	public static double max(double num1, double num2) {
+	  if (num1 > num2)
+	    return num1;
+	  else
+	    return num2;
+	}
+
+	如果你调用max方法时传递的是int型参数，则 int型参数的max方法就会被调用；
+	如果传递的是double型参数，则double类型的max方法体会被调用，这叫做方法重载；
+	就是说一个类的两个方法拥有相同的名字，但是有不同的参数列表。
+	Java编译器根据方法签名判断哪个方法应该被调用。
+	方法重载可以让程序更清晰易读。执行密切相关任务的方法应该使用相同的名字。
+	重载的方法必须拥有不同的参数列表。你不能仅仅依据修饰符或者返回类型的不同来重载方法。
+
+变量作用域
+
+	变量的范围是程序中该变量可以被引用的部分。
+	方法内定义的变量被称为局部变量。
+	局部变量的作用范围从声明开始，直到包含它的块结束。
+	局部变量必须声明才可以使用。
+	方法的参数范围涵盖整个方法。参数实际上是一个局部变量。
+	for循环的初始化部分声明的变量，其作用范围在整个循环。
+	但循环体内声明的变量其适用范围是从它声明到循环体结束。它包含如下所示的变量声明：
+	
+	你可以在一个方法里，不同的非嵌套块中多次声明一个具有相同的名称局部变量，但你不能在嵌套块内两次声明局部变量。
+	命令行参数的使用
+	有时候你希望运行一个程序时候再传递给它消息。这要靠传递命令行参数给main()函数实现。
+	命令行参数是在执行程序时候紧跟在程序名字后面的信息。
+
 实例
 
 下面的程序打印所有的命令行参数：
-
-CommandLine.java 文件代码：
-public class CommandLine {
-   public static void main(String args[]){ 
-      for(int i=0; i<args.length; i++){
-         System.out.println("args[" + i + "]: " + args[i]);
-      }
-   }
-}
-
-如下所示，运行这个程序：
-
-$ javac CommandLine.java 
-$ java CommandLine this is a command line 200 -100
-args[0]: this
-args[1]: is
-args[2]: a
-args[3]: command
-args[4]: line
-args[5]: 200
-args[6]: -100
+	
+	CommandLine.java 文件代码：
+	public class CommandLine {
+	   public static void main(String args[]){ 
+	      for(int i=0; i<args.length; i++){
+	         System.out.println("args[" + i + "]: " + args[i]);
+	      }
+	   }
+	}
+	
+	如下所示，运行这个程序：
+	
+	$ javac CommandLine.java 
+	$ java CommandLine this is a command line 200 -100
+	args[0]: this
+	args[1]: is
+	args[2]: a
+	args[3]: command
+	args[4]: line
+	args[5]: 200
+	args[6]: -100
 
 构造方法
 
