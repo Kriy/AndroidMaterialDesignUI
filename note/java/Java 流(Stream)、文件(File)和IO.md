@@ -108,34 +108,47 @@ int read( ) throws IOException
 	end
 
 JDK 5 后的版本我们也可以使用 Java Scanner 类来获取控制台的输入。
-控制台输出
+
+## 控制台输出
+
 在此前已经介绍过，控制台的输出由 print( ) 和 println() 完成。这些方法都由类 PrintStream 定义，System.out 是该类对象的一个引用。
+
 PrintStream 继承了 OutputStream类，并且实现了方法 write()。这样，write() 也可以用来往控制台写操作。
+
 PrintStream 定义 write() 的最简单格式如下所示：
+
 void write(int byteval)
 该方法将 byteval 的低八位字节写到流中。
+
 实例
 下面的例子用 write() 把字符 "A" 和紧跟着的换行符输出到屏幕：
-WriteDemo.java 文件代码：
-import java.io.*;
- 
-// 演示 System.out.write().
-public class WriteDemo {
-   public static void main(String args[]) {
-      int b; 
-      b = 'A';
-      System.out.write(b);
-      System.out.write('\n');
-   }
-}
+
+	WriteDemo.java 文件代码：
+	import java.io.*;
+	 
+	// 演示 System.out.write().
+	public class WriteDemo {
+	   public static void main(String args[]) {
+	      int b; 
+	      b = 'A';
+	      System.out.write(b);
+	      System.out.write('\n');
+	   }
+	}
+
 运行以上实例在输出窗口输出 "A" 字符
+
 A
+
 注意：write() 方法不经常使用，因为 print() 和 println() 方法用起来更为方便。
-读写文件
+
+## 读写文件
+
 如前所述，一个流被定义为一个数据序列。输入流用于从源读取数据，输出流用于向目标写数据。
 下图是一个描述输入流和输出流的类层次图。
 
 下面将要讨论的两个重要的流是 FileInputStream 和 FileOutputStream：
+
 FileInputStream
 该流用于从文件读取数据，它的对象可以用关键字 new 来创建。
 有多种构造方法可用来创建对象。
